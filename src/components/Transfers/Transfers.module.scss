@@ -1,0 +1,68 @@
+.transfers {
+  background-color: rgba(255, 255, 255, 1);
+
+  width: 232px;
+  height: 252px;
+  border-radius: 5px;
+
+  h3 {
+    margin: 0;
+    padding: 20px 20px 5px 20px;
+
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .transfers__count {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 13px;
+    line-height: 20px;
+
+    label {
+      .transfers__input:checked + div {
+        background-image: url("../../../public/img/checkboxChecked.svg");
+        background-position: left 20px bottom 10px;
+      }
+
+      .transfers__input:focus + div {
+        border: 1px solid orange;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        width: 232px;
+        height: 40px;
+        padding-inline: 20px;
+        padding-left: 50px;
+
+        background-color: rgba(255, 255, 255, 1);
+        background-image: url("../../../public/img/checkbox.svg");
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: left 20px bottom 10px;
+
+        &:hover {
+          background-color: rgba(241, 252, 255, 1);
+        }
+      }
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
