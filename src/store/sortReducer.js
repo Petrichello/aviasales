@@ -6,7 +6,7 @@ const CHEAPEST = "CHEAPEST";
 const FASTEST = "FASTEST";
 const OPTIMAL = "OPTIMAL";
 
-export const sortReducer = (action, state = defaultState) => {
+export const sortReducer = (state = defaultState, action = {}) => {
   switch (action.type) {
     case CHEAPEST:
       return { ...state, sort: "cheapest" };

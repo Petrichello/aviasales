@@ -49,11 +49,20 @@ function TicketsList() {
   };
 
   if (visibleTickets.length > 0) {
-    elements = visibleTickets.map((element) => {
+    const els = visibleTickets.map((element) => {
       const id = uniqid();
 
       return <Ticket key={id} {...element} />;
     });
+
+    elements = (
+      <ul className={classes.tickets__list}>
+        {els}
+        <button type="button" className={classes.tickets__more} onClick={addVisibleTickets}>
+          ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!
+        </button>
+      </ul>
+    );
   } else if (tickets.length > 0) {
     elements = (
       <button type="button" className={classes.tickets__more} onClick={addVisibleTickets}>
@@ -64,7 +73,7 @@ function TicketsList() {
     elements = <div>Рейсов, подходящих под заданные фильтры, не найдено</div>;
   }
 
-  return { elements };
+  return elements;
   // {visibleTickets.length > 0 ?
   //   (<ul className={classes["tickets__list"]}>
   //       {elements}

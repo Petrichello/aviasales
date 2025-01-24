@@ -9,7 +9,7 @@ const ADD_VISIBLE_TICKETS = "ADD_VISIBLE_TICKETS";
 const CLEAR_VISIBLE_TICKETS = "CLEAR_VISIBLE_TICKETS";
 const STOP_LOADING = "STOP_LOADING";
 
-export const ticketsReducer = (action, state = defaultState) => {
+export const ticketsReducer = (state = defaultState, action = {}) => {
   switch (action.type) {
     case STOP_LOADING:
       return { ...state, loading: false };

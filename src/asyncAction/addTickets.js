@@ -21,12 +21,12 @@ export const asyncAddTickets = () =>
                 dispatch(addTicketsAction(newResponse.tickets));
               })
               .catch((error) => {
-                throw new Error(error);
+                throw error;
               });
-          }, 3000);
+          }, 4000);
         })
         .catch((error) => {
-          throw new Error(error);
+          throw error;
         });
     });
   };

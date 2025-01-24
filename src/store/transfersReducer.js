@@ -19,7 +19,7 @@ const UNCHECKED_TWO = "UNCHECKED_TWO";
 const CHECKED_THREE = "CHECKED_THREE";
 const UNCHECKED_THREE = "UNCHECKED_THREE";
 
-export const transfersReducer = (action, state = defaultState) => {
+export const transfersReducer = (state = defaultState, action = {}) => {
   switch (action.type) {
     case CHECKED_ALL:
       return { ...state, checkboxes: { ...state.checkboxes, all: true } };
